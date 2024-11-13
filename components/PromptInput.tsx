@@ -2,6 +2,7 @@ import { Loader2, SendHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea"
 
 interface PromptInputProps {
   prompt: string;
@@ -44,7 +45,7 @@ export function PromptInput({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex gap-2">
-        <Input
+        <Textarea
           placeholder="Describe the image you want to generate..."
           value={prompt}
           onChange={(e) => onPromptChange(e.target.value)}
