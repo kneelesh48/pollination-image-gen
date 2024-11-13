@@ -58,7 +58,6 @@ export function PromptInput({
           ) : (
             <SendHorizontal className="h-4 w-4" />
           )}
-          <span className="ml-2 hidden sm:inline">Generate</span>
         </Button>
       </div>
 
