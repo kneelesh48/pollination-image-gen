@@ -11,6 +11,7 @@ export default function Home() {
   const DEFAULT_PROMPT = "Astronaut riding a horse on Mars";
 
   const [prompt, setPrompt] = useState(DEFAULT_PROMPT);
+
   const [width, setWidth] = useState("512");
   const [height, setHeight] = useState("512"); 
   const [seed, setSeed] = useState("1");
@@ -28,7 +29,7 @@ export default function Home() {
     setLoading(true);
     try {
       const BASE_URL = "https://pollinations.ai/p"
-      const url = `${BASE_URL}/${encodeURIComponent(prompt)}`;
+
       const params = new URLSearchParams({
         width: width,
         height: height,
@@ -38,7 +39,7 @@ export default function Home() {
         enhance: enhance ? "true" : "false",
       });
 
-      const finalUrl = `${url}?${params}`;
+      const finalUrl = `${BASE_URL}/${encodeURIComponent(prompt)}?${params}`;
 
       // Attempt to load the image first
       const img = new Image();
@@ -79,7 +80,7 @@ export default function Home() {
           </p>
         </div>
 
-        <Card className="p-6 shadow-lg grid grid-cols-2 space-x-4">
+        <Card className="p-6 shadow-lg grid grid-cols-1 md:grid-cols-2 gap-4 md:space-x-4">
           <PromptInput
             prompt={prompt}
             onPromptChange={setPrompt}
