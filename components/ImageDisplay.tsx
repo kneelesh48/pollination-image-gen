@@ -11,7 +11,7 @@ export function ImageDisplay({ imageUrl, prompt }: ImageDisplayProps) {
   return (
     <div
       className={cn(
-        "mt-6 rounded-lg border-2 border-dashed",
+        "rounded-lg border-2 border-dashed",
         "aspect-square flex items-center justify-center",
         !imageUrl && "bg-muted"
       )}
