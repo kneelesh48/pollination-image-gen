@@ -14,7 +14,7 @@ export default function Home() {
 
   const [width, setWidth] = useState("512");
   const [height, setHeight] = useState("512"); 
-  const [seed, setSeed] = useState("1");
+  const [seed, setSeed] = useState(Date.now());
   const [noLogo, setNoLogo] = useState(true);
   const [isPrivate, setIsPrivate] = useState(true);
   const [enhance, setEnhance] = useState(true);
